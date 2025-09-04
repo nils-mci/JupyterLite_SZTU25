@@ -1,0 +1,35 @@
+name: Build & Deploy JupyterLite
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install JupyterLite + webR
+        run: |
+          python -m pip install --upgrade pip
+          pip install "jupyterlite[pyodide]" jupyterlite-webr
+
+      - name: Build site
+        run: jupyter lite build --output-dir _output
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _output
