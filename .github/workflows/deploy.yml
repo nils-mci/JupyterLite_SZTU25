@@ -20,14 +20,16 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install JupyterLite + webR
+      - name: Install JupyterLite
         run: |
           python -m pip install --upgrade pip
-          pip install "jupyterlite[pyodide]" jupyterlite-webr
+          # Pyodide kernel so notebooks run fully in-browser
+          pip install "jupyterlite[pyodide]"
 
       - name: Build site
-        run: jupyter lite build --contents content --output-dir _output
-         
+        run: |
+          jupyter lite build --output-dir _output
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
