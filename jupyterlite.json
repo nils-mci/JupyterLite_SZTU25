@@ -8,5 +8,18 @@
         "theme": "JupyterLab Light"
       }
     }
+  },
+  "litePluginSettings": {
+    "@jupyterlite/contents": {
+      "baseUrl": "./",
+      "rootDir": "",
+      "contents": [
+        {
+          "name": "",
+          "type": "directory",
+          "children": []
+        }
+      ]
+    }
   }
 }
