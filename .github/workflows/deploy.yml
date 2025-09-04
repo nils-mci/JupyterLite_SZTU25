@@ -26,8 +26,8 @@ jobs:
           pip install "jupyterlite[pyodide]" jupyterlite-webr
 
       - name: Build site
-        run: jupyter lite build --output-dir _output
-
+        run: jupyter lite build --contents content --output-dir _output
+         
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
