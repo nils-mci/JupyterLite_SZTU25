@@ -1,4 +1,4 @@
-.github/workflows/deploy.ymlname: Build & Deploy JupyterLite
+name: Build & Deploy JupyterLite with R
 
 on:
   push:
@@ -20,12 +20,26 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install JupyterLite + webR kernel
+      - name: Install JupyterLite + webR
         run: |
-          python -m pip install --upgrade pip
-          pip install "jupyterlite[pyodide]" jupyterlite-webr
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install "jupyterlite[pyodide]" jupyterlite-webr
+
+      - name: Debug: show versions and tree
+        run: |
+          python --version
+          python -m pip --version
+          python -m jupyterlite --version
+          echo "Repo root:"
+          ls -la
+          echo "./files"
+          ls -la files || true
+          echo "./files/data"
+          ls -la files/data || true
+
       - name: Build site
-        run: jupyter lite build --output-dir _output
+        run: |
+          jupyter lite build --output-dir _output
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
