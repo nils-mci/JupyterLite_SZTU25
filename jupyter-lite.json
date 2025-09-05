@@ -6,7 +6,14 @@
     "baseUrl": "./",
     "defaultKernelName": "python",
     "faviconUrl": "./lab/favicon.ico",
-    "federated_extensions": [],
+    "federated_extensions": [
+      {
+        "extension": "./extension",
+        "load": "static/remoteEntry.7690036a599837aed2a8.js",
+        "name": "@r-wasm/jupyterlite-webr-kernel",
+        "style": "./style"
+      }
+    ],
     "fileTypes": {
       "css": {
         "extensions": [
