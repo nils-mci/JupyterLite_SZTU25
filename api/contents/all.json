@@ -1,0 +1,57 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2025-09-05T10:03:47.095575Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2025-09-05T10:03:27.264586Z",
+      "mimetype": null,
+      "name": "welcome.ipynb",
+      "path": "welcome.ipynb",
+      "size": 2619,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2025-09-05T10:03:47.094575Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2025-09-05T10:03:27.264586Z",
+      "mimetype": "text/csv",
+      "name": "ChinaRegionalData.csv",
+      "path": "ChinaRegionalData.csv",
+      "size": 14737,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2025-09-05T10:03:47.095575Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2025-09-05T10:03:27.264586Z",
+      "mimetype": "text/csv",
+      "name": "ChinaRegionalData.data.csv",
+      "path": "ChinaRegionalData.data.csv",
+      "size": 14737,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2025-09-05T10:03:47.095575Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2025-09-05T10:03:47.095575Z",
+  "mimetype": null,
+  "name": "",
+  "path": "",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
